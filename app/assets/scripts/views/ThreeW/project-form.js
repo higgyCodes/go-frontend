@@ -118,7 +118,6 @@ class ProjectForm extends React.PureComponent {
       },
     };
 
-    // console.warn(props.projectData);
     const { projectData = {} } = props;
 
     this.state = {
@@ -271,9 +270,11 @@ class ProjectForm extends React.PureComponent {
       fields: { ...this.schema.fields }
     };
 
+    /*
     if (operationType === 'Programme') {
       schema.fields.dtype = [requiredCondition];
     }
+    */
 
     if (operationType === 'Emergency Operation' && programmeType === 'Multilateral') {
       schema.fields.event = [requiredCondition];
